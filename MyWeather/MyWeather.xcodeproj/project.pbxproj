@@ -6,17 +6,34 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B87E85F42DCE45AC00A9AA53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87E85EE2DCE45AC00A9AA53 /* Preview Assets.xcassets */; };
+		B87E85F52DCE45AC00A9AA53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87E85F02DCE45AC00A9AA53 /* Assets.xcassets */; };
+		B87E85F62DCE45AC00A9AA53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E85F12DCE45AC00A9AA53 /* ContentView.swift */; };
+		B87E85F72DCE45AC00A9AA53 /* MyWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E85F22DCE45AC00A9AA53 /* MyWeatherApp.swift */; };
+		B87E85FA2DCE462000A9AA53 /* HourlyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E85F92DCE461A00A9AA53 /* HourlyDTO.swift */; };
+		B87E85FC2DCE479D00A9AA53 /* WeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E85FB2DCE479600A9AA53 /* WeatherDTO.swift */; };
+		B87E85FE2DCE47D500A9AA53 /* AstronomyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E85FD2DCE47D000A9AA53 /* AstronomyDTO.swift */; };
+		B87E86002DCE48AD00A9AA53 /* RequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E85FF2DCE48AD00A9AA53 /* RequestDTO.swift */; };
+		B87E86022DCE48CB00A9AA53 /* NearestAreaDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E86012DCE48CB00A9AA53 /* NearestAreaDTO.swift */; };
+		B87E86042DCE493300A9AA53 /* CurrentConditionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E86032DCE493300A9AA53 /* CurrentConditionDTO.swift */; };
+		B87E86062DCE49A500A9AA53 /* RootDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E86052DCE49A500A9AA53 /* RootDTO.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B87E85DD2DCE41BA00A9AA53 /* MyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B87E85EE2DCE45AC00A9AA53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B87E85F02DCE45AC00A9AA53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B87E85F12DCE45AC00A9AA53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B87E85F22DCE45AC00A9AA53 /* MyWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeatherApp.swift; sourceTree = "<group>"; };
+		B87E85F92DCE461A00A9AA53 /* HourlyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyDTO.swift; sourceTree = "<group>"; };
+		B87E85FB2DCE479600A9AA53 /* WeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDTO.swift; sourceTree = "<group>"; };
+		B87E85FD2DCE47D000A9AA53 /* AstronomyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyDTO.swift; sourceTree = "<group>"; };
+		B87E85FF2DCE48AD00A9AA53 /* RequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDTO.swift; sourceTree = "<group>"; };
+		B87E86012DCE48CB00A9AA53 /* NearestAreaDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestAreaDTO.swift; sourceTree = "<group>"; };
+		B87E86032DCE493300A9AA53 /* CurrentConditionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionDTO.swift; sourceTree = "<group>"; };
+		B87E86052DCE49A500A9AA53 /* RootDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		B87E85DF2DCE41BA00A9AA53 /* MyWeather */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MyWeather;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B87E85DA2DCE41BA00A9AA53 /* Frameworks */ = {
@@ -32,7 +49,7 @@
 		B87E85D42DCE41BA00A9AA53 = {
 			isa = PBXGroup;
 			children = (
-				B87E85DF2DCE41BA00A9AA53 /* MyWeather */,
+				B87E85F32DCE45AC00A9AA53 /* MyWeather */,
 				B87E85DE2DCE41BA00A9AA53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +60,40 @@
 				B87E85DD2DCE41BA00A9AA53 /* MyWeather.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B87E85EF2DCE45AC00A9AA53 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B87E85EE2DCE45AC00A9AA53 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B87E85F32DCE45AC00A9AA53 /* MyWeather */ = {
+			isa = PBXGroup;
+			children = (
+				B87E85F82DCE45B800A9AA53 /* DTOs */,
+				B87E85EF2DCE45AC00A9AA53 /* Preview Content */,
+				B87E85F02DCE45AC00A9AA53 /* Assets.xcassets */,
+				B87E85F12DCE45AC00A9AA53 /* ContentView.swift */,
+				B87E85F22DCE45AC00A9AA53 /* MyWeatherApp.swift */,
+			);
+			path = MyWeather;
+			sourceTree = "<group>";
+		};
+		B87E85F82DCE45B800A9AA53 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				B87E86052DCE49A500A9AA53 /* RootDTO.swift */,
+				B87E86032DCE493300A9AA53 /* CurrentConditionDTO.swift */,
+				B87E86012DCE48CB00A9AA53 /* NearestAreaDTO.swift */,
+				B87E85FF2DCE48AD00A9AA53 /* RequestDTO.swift */,
+				B87E85FD2DCE47D000A9AA53 /* AstronomyDTO.swift */,
+				B87E85FB2DCE479600A9AA53 /* WeatherDTO.swift */,
+				B87E85F92DCE461A00A9AA53 /* HourlyDTO.swift */,
+			);
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +110,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				B87E85DF2DCE41BA00A9AA53 /* MyWeather */,
 			);
 			name = MyWeather;
 			packageProductDependencies = (
@@ -109,6 +157,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87E85F42DCE45AC00A9AA53 /* Preview Assets.xcassets in Resources */,
+				B87E85F52DCE45AC00A9AA53 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +169,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87E85F62DCE45AC00A9AA53 /* ContentView.swift in Sources */,
+				B87E86062DCE49A500A9AA53 /* RootDTO.swift in Sources */,
+				B87E86002DCE48AD00A9AA53 /* RequestDTO.swift in Sources */,
+				B87E85FA2DCE462000A9AA53 /* HourlyDTO.swift in Sources */,
+				B87E86042DCE493300A9AA53 /* CurrentConditionDTO.swift in Sources */,
+				B87E85FE2DCE47D500A9AA53 /* AstronomyDTO.swift in Sources */,
+				B87E85FC2DCE479D00A9AA53 /* WeatherDTO.swift in Sources */,
+				B87E85F72DCE45AC00A9AA53 /* MyWeatherApp.swift in Sources */,
+				B87E86022DCE48CB00A9AA53 /* NearestAreaDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
