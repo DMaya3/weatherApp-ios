@@ -1,0 +1,18 @@
+//
+//  HomeView.swift
+//  MyWeather
+//
+//  Created by David Jesús Maya Quirós on 10/5/25.
+//
+
+import SwiftUI
+
+struct HomeView: View {
+    var body: some View {
+        Text("Hello, World!")
+    }
+}
+
+#Preview {
+    HomeView()
+}
