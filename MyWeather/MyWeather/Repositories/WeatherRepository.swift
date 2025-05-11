@@ -19,7 +19,7 @@ struct WeatherDataRepository: WeatherRepository {
     
     
     func fetchWeatherDataService(name: String) async -> AnyPublisher<RootDTO, any Error> {
-        return call(endpoint: API.weather(name: name), name: "weather")
+        return call(endpoint: API.weather(name: name))
     }
 }
 
