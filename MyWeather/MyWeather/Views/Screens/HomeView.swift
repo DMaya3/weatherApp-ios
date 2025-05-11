@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject private var locationManager = LocationManager()
+    @EnvironmentObject private var viewModel: WeatherViewModel
     
+    // TODO: Design the view
     var body: some View {
         VStack(spacing: 20) {
-            if let location = locationManager.userLocation {
-                Text("Latitude: \(location.latitude)")
-                Text("Longitude: \(location.longitude)")
-            } else {
-                Text("Getting location...")
+            ForEach(self.viewModel.nearestArea) { area in
+                if let locality = area.region.first?.value {
+                    Text(locality)
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
             }
         }
         .padding()
