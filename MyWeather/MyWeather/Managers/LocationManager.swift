@@ -10,9 +10,10 @@ import CoreLocation
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
+    private let geocoder = CLGeocoder()
     
-    @Published var userLocation: CLLocationCoordinate2D?
     @Published var locationStatus: CLAuthorizationStatus?
+    @Published var locality: String?
     
     override init() {
         super.init()
@@ -40,11 +41,21 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        userLocation = location.coordinate
+        reverseGeocode(location)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: any Error) {
         print("Location error: \(error.localizedDescription)")
+    }
+    
+    private func reverseGeocode(_ location: CLLocation) {
+        geocoder.reverseGeocodeLocation(location) { [weak self] placemarks, error in
+            DispatchQueue.main.async {
+                if let placemark = placemarks?.first {
+                    self?.locality = placemark.locality
+                }
+            }
+        }
     }
     
 }
