@@ -12,7 +12,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
     private let geocoder = CLGeocoder()
     
-    @Published var locationStatus: CLAuthorizationStatus?
     @Published var locality: String?
     
     override init() {
