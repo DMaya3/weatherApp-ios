@@ -5,8 +5,8 @@
 //  Created by David Jesús Maya Quirós on 9/5/25.
 //
 
-
-struct CurrentConditionDTO: Codable {
+struct CurrentConditionDTO: Codable, Identifiable {
+    var id: String { localObsDateTime }
     let feelsLikeC: String
     let feelsLikeF: String
     let cloudcover: String
