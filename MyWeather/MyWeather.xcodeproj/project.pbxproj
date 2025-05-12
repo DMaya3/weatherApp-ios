@@ -10,6 +10,8 @@
 		B80AF0BB2DCE774D0067620C /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80AF0BA2DCE77440067620C /* WeatherRepository.swift */; };
 		B80AF0BC2DCE77F10067620C /* NetworkingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E86292DCE4C4500A9AA53 /* NetworkingHelpers.swift */; };
 		B80AF0BF2DCE7AB30067620C /* WeatherUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80AF0BE2DCE7AAE0067620C /* WeatherUseCase.swift */; };
+		B8539D532DD23B9F001B7DC7 /* CurrentConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8539D522DD23B94001B7DC7 /* CurrentConditionView.swift */; };
+		B8539D552DD24028001B7DC7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8539D542DD24020001B7DC7 /* CardView.swift */; };
 		B87E85F42DCE45AC00A9AA53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87E85EE2DCE45AC00A9AA53 /* Preview Assets.xcassets */; };
 		B87E85F52DCE45AC00A9AA53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87E85F02DCE45AC00A9AA53 /* Assets.xcassets */; };
 		B87E85F72DCE45AC00A9AA53 /* MyWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E85F22DCE45AC00A9AA53 /* MyWeatherApp.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		B80AF0BA2DCE77440067620C /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		B80AF0BE2DCE7AAE0067620C /* WeatherUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUseCase.swift; sourceTree = "<group>"; };
+		B8539D522DD23B94001B7DC7 /* CurrentConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionView.swift; sourceTree = "<group>"; };
+		B8539D542DD24020001B7DC7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B87E85DD2DCE41BA00A9AA53 /* MyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87E85EE2DCE45AC00A9AA53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B87E85F02DCE45AC00A9AA53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +72,15 @@
 				B80AF0BE2DCE7AAE0067620C /* WeatherUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B8539D512DD23B8C001B7DC7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B8539D542DD24020001B7DC7 /* CardView.swift */,
+				B8539D522DD23B94001B7DC7 /* CurrentConditionView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B87E85D42DCE41BA00A9AA53 = {
@@ -155,6 +168,7 @@
 		B8E9F4482DCF92F3006F87B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B8539D512DD23B8C001B7DC7 /* Components */,
 				B8E9F4492DCF92FF006F87B4 /* Screens */,
 			);
 			path = Views;
@@ -256,6 +270,7 @@
 				B87E86002DCE48AD00A9AA53 /* RequestDTO.swift in Sources */,
 				B87E86262DCE4BF600A9AA53 /* APICall.swift in Sources */,
 				B87E85FA2DCE462000A9AA53 /* HourlyDTO.swift in Sources */,
+				B8539D552DD24028001B7DC7 /* CardView.swift in Sources */,
 				B87E86282DCE4C0B00A9AA53 /* Error.swift in Sources */,
 				B87E86042DCE493300A9AA53 /* CurrentConditionDTO.swift in Sources */,
 				B87E85FE2DCE47D500A9AA53 /* AstronomyDTO.swift in Sources */,
@@ -263,6 +278,7 @@
 				B8D1AAF32DCFA05500689A25 /* WeatherViewModel.swift in Sources */,
 				B87E85FC2DCE479D00A9AA53 /* WeatherDTO.swift in Sources */,
 				B87E85F72DCE45AC00A9AA53 /* MyWeatherApp.swift in Sources */,
+				B8539D532DD23B9F001B7DC7 /* CurrentConditionView.swift in Sources */,
 				B8E9F44C2DCF9315006F87B4 /* HomeView.swift in Sources */,
 				B87E86022DCE48CB00A9AA53 /* NearestAreaDTO.swift in Sources */,
 				B80AF0BF2DCE7AB30067620C /* WeatherUseCase.swift in Sources */,
