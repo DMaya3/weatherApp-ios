@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var viewModel: WeatherViewModel
+    var dfHelper: DateFormatterHelpers {
+        ImpDateFormatterHelpers()
+    }
     
     var body: some View {
         ScrollView {
@@ -30,7 +33,13 @@ struct HomeView: View {
                 }
 
                 ForEach(self.viewModel.currentCondition) { currentCondition in
-                    CurrentConditionView(currentCondition: currentCondition)
+                    if let weather = viewModel.weather.first {
+                        CurrentConditionView(currentCondition: currentCondition, weather: weather)
+                    }
+                }
+                
+                ForEach(self.viewModel.weather) { weather in
+                    DailyWeatherView(weather: weather)
                 }
 
                 Spacer()
@@ -39,7 +48,7 @@ struct HomeView: View {
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         .foregroundStyle(.white)
         .shadow(radius: 10)
-        .background(Color(.cyan))
+        .background(LinearGradient(colors: [Color(.cyan), Color(.cyan), Color(.yellow)], startPoint: .topLeading, endPoint: .bottomTrailing))
         .padding()
     }
 }

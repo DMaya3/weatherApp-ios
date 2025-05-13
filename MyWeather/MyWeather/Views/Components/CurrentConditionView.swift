@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct CurrentConditionView: View {
-    var currentCondition: CurrentConditionDTO
+    let currentCondition: CurrentConditionDTO
+    let weather: WeatherDTO
     
-    init(currentCondition: CurrentConditionDTO) {
+    var dfHelper: DateFormatterHelpers {
+        ImpDateFormatterHelpers()
+    }
+    
+    init(currentCondition: CurrentConditionDTO, weather: WeatherDTO) {
         self.currentCondition = currentCondition
+        self.weather = weather
     }
     
     var body: some View {
@@ -20,42 +26,69 @@ struct CurrentConditionView: View {
                 .font(.system(size: 85))
                 .fontDesign(.rounded)
             
-            Text("Feels Like: \(self.currentCondition.feelsLikeC)º")
+            HStack {
+                if let weatherDesc = currentCondition.weatherDesc.first?.value {
+                    Text(weatherDesc)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .opacity(0.8)
+                    
+                    Image(systemName: self.getWeatherIcon(weatherDesc))
+                }
+                
+            }
+            Text("H: \(self.weather.maxtempC)º | L: \(self.weather.mintempC)º")
                 .font(.title2)
-                .fontWeight(.bold)
-                .opacity(0.8)
             
-            Text(self.currentCondition.weatherDesc.first?.value ?? "")
-                .font(.title2)
-                .fontWeight(.bold)
-                .opacity(0.8)
+            Text(dfHelper.formatDate(self.weather.date))
+                .font(.title)
+                .padding(.top, 6)
+            
+            HStack {
+                CardView(
+                    icon: "thermometer.medium",
+                    title: "Feels like",
+                    value: "\(self.currentCondition.feelsLikeC)º",
+                    description: "Similar to the actual temperature")
+                
+                CardView(
+                    icon: "wind",
+                    title: "wind",
+                    value: "\(self.currentCondition.windspeedKmph) km/h",
+                    description: "The wind´s direction is currently \(self.currentCondition.winddirDegree)º")
+            }
             
             HStack {
                 CardView(
                     icon: "humidity.fill",
-                    title: "Humidity".capitalized,
+                    title: "Humidity",
                     value: "\(self.currentCondition.humidity)%")
                 
                 CardView(
                     icon: "eye.fill",
-                    title: "Visiblity".capitalized,
-                    value: "\(self.currentCondition.visibility) Km")
+                    title: "Visiblity",
+                    value: "\(self.currentCondition.visibility) Km",
+                    description: "The visibility is about \(self.currentCondition.visibilityMiles) miles")
             }
-            
-            Text(formatDate(self.currentCondition.localObsDateTime))
-                .font(.title)
         }
         .frame(maxWidth: .infinity)
     }
 }
 
 extension CurrentConditionView {
-    func formatDate(_ input: String) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd hh:mm a"
-        guard let date = formatter.date(from: input) else { return "Invalid date" }
-        
-        formatter.dateFormat = "EEEE, MMMM d"
-        return formatter.string(from: date)
+    
+    func getWeatherIcon(_ weatherStatus: String) -> String {
+        switch weatherStatus {
+        case "Sunny":
+            return "sun.max.fill"
+        case "Partly cloudy":
+            return "cloud.sun.fill"
+        case "Thundery outbreaks in nearby":
+            return "cloud.sun.rain.fill"
+        case "Patchy rain nearby":
+            return "cloud.bolt.rain.fill"
+        default:
+            return "cloud.fill"
+        }
     }
 }

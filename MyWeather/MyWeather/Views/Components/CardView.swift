@@ -24,7 +24,7 @@ struct CardView: View {
         VStack {
             HStack {
                 Image(systemName: icon)
-                Text(title)
+                Text(title.uppercased())
             }
             .foregroundStyle(.white)
             .font(.system(size: 16))
@@ -35,12 +35,12 @@ struct CardView: View {
                 .font(.title)
                 .foregroundStyle(.white)
             
-            Spacer()
-            
             Text(description ?? "No description available")
                 .font(.caption)
+                .multilineTextAlignment(.leading)
                 .foregroundStyle(.white)
-                .padding()
+                .padding(.horizontal)
+                .padding(.vertical, 8)
         }
         .frame(width: 150, height: 150)
         .background(.cyan)

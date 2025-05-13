@@ -10,6 +10,8 @@
 		B80AF0BB2DCE774D0067620C /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80AF0BA2DCE77440067620C /* WeatherRepository.swift */; };
 		B80AF0BC2DCE77F10067620C /* NetworkingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E86292DCE4C4500A9AA53 /* NetworkingHelpers.swift */; };
 		B80AF0BF2DCE7AB30067620C /* WeatherUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80AF0BE2DCE7AAE0067620C /* WeatherUseCase.swift */; };
+		B8148EC72DD34D3100C04232 /* DateFormatterHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8148EC62DD34D2500C04232 /* DateFormatterHelpers.swift */; };
+		B8148ECA2DD34F4A00C04232 /* DailyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8148EC92DD34F4200C04232 /* DailyWeatherView.swift */; };
 		B8539D532DD23B9F001B7DC7 /* CurrentConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8539D522DD23B94001B7DC7 /* CurrentConditionView.swift */; };
 		B8539D552DD24028001B7DC7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8539D542DD24020001B7DC7 /* CardView.swift */; };
 		B87E85F42DCE45AC00A9AA53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87E85EE2DCE45AC00A9AA53 /* Preview Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		B80AF0BA2DCE77440067620C /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		B80AF0BE2DCE7AAE0067620C /* WeatherUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUseCase.swift; sourceTree = "<group>"; };
+		B8148EC62DD34D2500C04232 /* DateFormatterHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelpers.swift; sourceTree = "<group>"; };
+		B8148EC92DD34F4200C04232 /* DailyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherView.swift; sourceTree = "<group>"; };
 		B8539D522DD23B94001B7DC7 /* CurrentConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionView.swift; sourceTree = "<group>"; };
 		B8539D542DD24020001B7DC7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B87E85DD2DCE41BA00A9AA53 /* MyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,9 +78,19 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		B8148EC82DD34D3700C04232 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B8148EC62DD34D2500C04232 /* DateFormatterHelpers.swift */,
+				B87E86292DCE4C4500A9AA53 /* NetworkingHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B8539D512DD23B8C001B7DC7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B8148EC92DD34F4200C04232 /* DailyWeatherView.swift */,
 				B8539D542DD24020001B7DC7 /* CardView.swift */,
 				B8539D522DD23B94001B7DC7 /* CurrentConditionView.swift */,
 			);
@@ -150,7 +164,7 @@
 		B87E86222DCE4BA800A9AA53 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B87E86292DCE4C4500A9AA53 /* NetworkingHelpers.swift */,
+				B8148EC82DD34D3700C04232 /* Helpers */,
 				B87E86272DCE4C0B00A9AA53 /* Error.swift */,
 				B87E86252DCE4BF600A9AA53 /* APICall.swift */,
 			);
@@ -264,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B80AF0BC2DCE77F10067620C /* NetworkingHelpers.swift in Sources */,
+				B8148ECA2DD34F4A00C04232 /* DailyWeatherView.swift in Sources */,
 				B8E9F44F2DCF9762006F87B4 /* LocationManager.swift in Sources */,
 				B80AF0BB2DCE774D0067620C /* WeatherRepository.swift in Sources */,
 				B87E86062DCE49A500A9AA53 /* RootDTO.swift in Sources */,
@@ -273,6 +288,7 @@
 				B8539D552DD24028001B7DC7 /* CardView.swift in Sources */,
 				B87E86282DCE4C0B00A9AA53 /* Error.swift in Sources */,
 				B87E86042DCE493300A9AA53 /* CurrentConditionDTO.swift in Sources */,
+				B8148EC72DD34D3100C04232 /* DateFormatterHelpers.swift in Sources */,
 				B87E85FE2DCE47D500A9AA53 /* AstronomyDTO.swift in Sources */,
 				B87E86212DCE4B9200A9AA53 /* WebRepository.swift in Sources */,
 				B8D1AAF32DCFA05500689A25 /* WeatherViewModel.swift in Sources */,
