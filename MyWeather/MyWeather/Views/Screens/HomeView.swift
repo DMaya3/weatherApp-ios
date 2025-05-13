@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject private var viewModel: WeatherViewModel
     @EnvironmentObject private var locationManager: LocationManager
+    @State private var showSearchList: Bool = false
     var dfHelper: DateFormatterHelpers {
         ImpDateFormatterHelpers()
     }
@@ -25,20 +26,12 @@ struct HomeView: View {
         } else {
             ScrollView {
                 VStack {
-                    HStack {
-                        Image(systemName: "paperplane.fill")
-                        Text("HOME")
-                            .font(.callout)
-                    }
-                    .shadow(radius: 10)
-                    .padding(.top, 45)
+                    TopBarView(showSearchList: $showSearchList)
 
-                    ForEach(self.viewModel.nearestArea) { area in
-                        if let locality = area.areaName.first?.value {
-                            Text(locality)
-                                .font(.system(size: 38))
-                                .padding(.top, 10)
-                        }
+                    ForEach(self.viewModel.areasName) { area in
+                        Text(area.value)
+                            .font(.system(size: 38))
+                            .padding(.top, 10)
                     }
 
                     ForEach(self.viewModel.currentCondition) { currentCondition in
@@ -54,6 +47,7 @@ struct HomeView: View {
 
                     Spacer()
                 }
+                .padding(.vertical, 20)
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             .foregroundStyle(.white)
@@ -65,6 +59,14 @@ struct HomeView: View {
                     title: Text("Required Location Permission"),
                     message: Text("You have to allow location permission to use this app"),
                     dismissButton: .cancel())
+            }
+            .sheet(isPresented: $showSearchList) {
+                SearchView(viewModel: self.viewModel) { selectedCity in
+                    Task {
+                        await self.viewModel.fetchWeather(name: selectedCity.name)
+                    }
+                    showSearchList = false
+                }
             }
         }
     }
