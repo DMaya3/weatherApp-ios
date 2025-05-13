@@ -1,0 +1,73 @@
+
+[
+    {
+        "name": "Sevilla",
+        "province": "Sevilla",
+        "region": "Andalucía"
+    },
+    {
+        "name": "Alcalá de Guadaíra",
+        "province": "Sevilla",
+        "region": "Andalucía"
+    },
+    {
+        "name": "Almadén de la Plata",
+        "province": "Sevilla",
+        "region": "Andalucía"
+    },
+    {
+        "name": "Monesterio",
+        "province": "Badajoz",
+        "region": "Andalucía"
+    },
+    {
+        "name": "El Puerto de Santamaría",
+        "province": "Cádiz",
+        "region": "Andalucía"
+    },
+    {
+        "name": "Valladolid",
+        "province": "Valladolid",
+        "region": "Castilla y León"
+    },
+    {
+        "name": "Alcoleja",
+        "province": "Alicante",
+        "region": "Comunidad Valenciana"
+    },
+    {
+        "name": "Isla Cristina",
+        "province": "Huelva",
+        "region": "Andalucía"
+    },
+    {
+        "name": "La Rinconada",
+        "province": "Sevilla",
+        "region": "Andalucía"
+    },
+    {
+        "name": "Jerez de la Frontera",
+        "province": "Cádiz",
+        "region": "Andalucía"
+    },
+    {
+        "name": "Alcalá de Henares",
+        "province": "Madrid",
+        "region": "Madrid"
+    },
+    {
+        "name": "Montejo",
+        "province": "Salamanca",
+        "region": "Castilla y León"
+    },
+    {
+        "name": "Ribadeo",
+        "province": "Lugo",
+        "region": "Galicia"
+    },
+    {
+        "name": "Cudilero",
+        "province": "Asturias",
+        "region": "Principado de Asturias"
+    },
+]

@@ -39,3 +39,8 @@ struct CurrentConditionDTO: Codable, Identifiable {
         case winddir16Point, winddirDegree, windspeedKmph, windspeedMiles
     }
 }
+
+struct WeatherDesc: Codable, Identifiable {
+    var id: String { value }
+    let value: String
+}

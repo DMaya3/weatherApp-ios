@@ -11,8 +11,9 @@ import Foundation
 
 class WeatherViewModel: ObservableObject {
     @Published var currentCondition: [CurrentConditionDTO] = []
-    @Published var nearestArea: [NearestAreaDTO] = []
     @Published var weather: [WeatherDTO] = []
+    @Published var areasName: [WeatherDesc] = []
+    @Published var cities: [CityDTO] = []
     private var suscription = Set<AnyCancellable>()
     
     var useCase: WeatherUseCase {
@@ -23,9 +24,9 @@ class WeatherViewModel: ObservableObject {
         Task {
             await self.fetchWeather(name: name)
         }
+        self.loadCitiesFromJson()
     }
     
-    // TODO: The parameter is empty
     func fetchWeather(name: String) async {
         await self.suscriberWeather(name: name)
     }
@@ -44,10 +45,20 @@ extension WeatherViewModel {
                 self?.handleCompletion(completion)
             } receiveValue: { [weak self] root in
                 self?.currentCondition = root.currentCondition
-                self?.nearestArea = root.nearestArea
                 self?.weather = root.weather
+                self?.areasName = root.nearestArea.flatMap { $0.areaName }
             }
             .store(in: &suscription)
+    }
+    
+    func loadCitiesFromJson() {
+        guard let url = Bundle.main.url(forResource: "Cities", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let decoded = try? JSONDecoder().decode([CityDTO].self, from: data) else {
+            print("Failed to fetch or decode Cities.json")
+            return
+        }
+        self.cities = decoded
     }
 }
 
