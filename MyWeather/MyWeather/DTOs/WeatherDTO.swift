@@ -7,22 +7,20 @@
 
 import Foundation
 
-struct WeatherDTO: Codable {
+struct WeatherDTO: Codable, Identifiable {
+    var id: String { date }
     let astronomy: [AstronomyDTO]
     let avgtempC: String
-    let avgtempF: String
     let date: String
     let hourly: [HourlyDTO]
     let maxtempC: String
-    let maxtempF: String
     let mintempC: String
-    let mintempF: String
     let sunHour: String
     let totalSnowCM: String
     let uvIndex: String
 
     enum CodingKeys: String, CodingKey {
-        case astronomy, avgtempC, avgtempF, date, hourly, maxtempC, maxtempF, mintempC, mintempF, sunHour
+        case astronomy, avgtempC, date, hourly, maxtempC, mintempC, sunHour
         case totalSnowCM = "totalSnow_cm"
         case uvIndex
     }
