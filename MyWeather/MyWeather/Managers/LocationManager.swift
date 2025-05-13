@@ -13,6 +13,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let geocoder = CLGeocoder()
     
     @Published var locality: String?
+    @Published var status: CLAuthorizationStatus = .notDetermined
+    @Published var showLocationDeniedAlert: Bool = false
     
     override init() {
         super.init()
@@ -23,13 +25,14 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        let status = manager.authorizationStatus
+        status = manager.authorizationStatus
         
         switch status {
         case .notDetermined:
             print("Location permission not determined yet.")
         case .restricted, .denied:
             print("Location access denied/restricted.")
+            showLocationDeniedAlert = true
         case .authorizedAlways, .authorizedWhenInUse:
             print("Location access granted.")
             manager.startUpdatingLocation()
@@ -56,5 +59,4 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             }
         }
     }
-    
 }
