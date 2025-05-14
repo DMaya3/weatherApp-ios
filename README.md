@@ -34,3 +34,6 @@ The app has integration and unit test to check the repository and viewModel work
 I´ve added an app icon to show in the device.
 
 <img src="https://github.com/user-attachments/assets/49f13c61-ebc2-4aff-93b7-9b1b505c6efc" width="150" height="200">
+
+
+This app is made for David Jesus Maya Quiros.
