@@ -16,9 +16,7 @@ class WeatherViewModel: ObservableObject {
     @Published var cities: [CityDTO] = []
     private var suscription = Set<AnyCancellable>()
     
-    var useCase: WeatherUseCase {
-        DefaultWeatherUseCase()
-    }
+    var useCase: WeatherUseCase = DefaultWeatherUseCase()
     
     init(name: String) {
         Task {
@@ -39,7 +37,7 @@ extension WeatherViewModel {
         return await self.useCase.fetchDataWeather(name: name)
     }
     
-    func suscriberWeather(name: String) async {
+    func suscriberWeather(name: String, completion: (() -> Void)? = nil) async {
         await weatherPublisher(name: name)
             .sink { [weak self] completion in
                 self?.handleCompletion(completion)
@@ -47,6 +45,7 @@ extension WeatherViewModel {
                 self?.currentCondition = root.currentCondition
                 self?.weather = root.weather
                 self?.areasName = root.nearestArea.flatMap { $0.areaName }
+                completion?()
             }
             .store(in: &suscription)
     }
