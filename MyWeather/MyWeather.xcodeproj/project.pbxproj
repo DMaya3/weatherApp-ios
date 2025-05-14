@@ -25,6 +25,13 @@
 		B87E86212DCE4B9200A9AA53 /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E86202DCE4B9200A9AA53 /* WebRepository.swift */; };
 		B87E86262DCE4BF600A9AA53 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E86252DCE4BF600A9AA53 /* APICall.swift */; };
 		B87E86282DCE4C0B00A9AA53 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E86272DCE4C0B00A9AA53 /* Error.swift */; };
+		B89B485A2DD4801900650A29 /* WeatherRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89B48582DD4801900650A29 /* WeatherRepositoryTest.swift */; };
+		B89B485E2DD485BA00650A29 /* WeatherMVTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89B485D2DD4859200650A29 /* WeatherMVTest.swift */; };
+		B89B48612DD4872A00650A29 /* MockWeatherUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89B48602DD4871C00650A29 /* MockWeatherUseCase.swift */; };
+		B89B48632DD488C200650A29 /* MockCurrentCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89B48622DD488B300650A29 /* MockCurrentCondition.swift */; };
+		B89B48652DD48B9400650A29 /* MockNearestArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89B48642DD48B8E00650A29 /* MockNearestArea.swift */; };
+		B89B48672DD48D4D00650A29 /* MockWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89B48662DD48D4800650A29 /* MockWeather.swift */; };
+		B89B48682DD496D400650A29 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = B8E1EC7C2DD3BBC2008D4826 /* Cities.json */; };
 		B8D1AAF32DCFA05500689A25 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D1AAF22DCFA05500689A25 /* WeatherViewModel.swift */; };
 		B8E1EC7D2DD3BBCF008D4826 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = B8E1EC7C2DD3BBC2008D4826 /* Cities.json */; };
 		B8E1EC7F2DD3BF86008D4826 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1EC7E2DD3BF7E008D4826 /* CityDTO.swift */; };
@@ -33,6 +40,16 @@
 		B8E9F44F2DCF9762006F87B4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E9F44E2DCF975E006F87B4 /* LocationManager.swift */; };
 		B8FB87BA2DD3970A00813149 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FB87B92DD3970600813149 /* SearchView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B89B48522DD47FDF00650A29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B87E85D52DCE41BA00A9AA53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B87E85DC2DCE41BA00A9AA53;
+			remoteInfo = MyWeather;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B80AF0BA2DCE77440067620C /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
@@ -54,6 +71,13 @@
 		B87E86252DCE4BF600A9AA53 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		B87E86272DCE4C0B00A9AA53 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		B87E86292DCE4C4500A9AA53 /* NetworkingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelpers.swift; sourceTree = "<group>"; };
+		B89B484E2DD47FDF00650A29 /* MyWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B89B48582DD4801900650A29 /* WeatherRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepositoryTest.swift; sourceTree = "<group>"; };
+		B89B485D2DD4859200650A29 /* WeatherMVTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMVTest.swift; sourceTree = "<group>"; };
+		B89B48602DD4871C00650A29 /* MockWeatherUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherUseCase.swift; sourceTree = "<group>"; };
+		B89B48622DD488B300650A29 /* MockCurrentCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCurrentCondition.swift; sourceTree = "<group>"; };
+		B89B48642DD48B8E00650A29 /* MockNearestArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNearestArea.swift; sourceTree = "<group>"; };
+		B89B48662DD48D4800650A29 /* MockWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeather.swift; sourceTree = "<group>"; };
 		B8D1AAF22DCFA05500689A25 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		B8E1EC7C2DD3BBC2008D4826 /* Cities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
 		B8E1EC7E2DD3BF7E008D4826 /* CityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
@@ -65,6 +89,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		B87E85DA2DCE41BA00A9AA53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B89B484B2DD47FDE00650A29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -107,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B87E85F32DCE45AC00A9AA53 /* MyWeather */,
+				B89B48592DD4801900650A29 /* MyWeatherTests */,
 				B87E85DE2DCE41BA00A9AA53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B87E85DD2DCE41BA00A9AA53 /* MyWeather.app */,
+				B89B484E2DD47FDF00650A29 /* MyWeatherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +206,43 @@
 				B87E86252DCE4BF600A9AA53 /* APICall.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B89B48592DD4801900650A29 /* MyWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				B89B485F2DD4870E00650A29 /* MockData */,
+				B89B485C2DD4858200650A29 /* UnitTest */,
+				B89B485B2DD4857600650A29 /* IntegrationTest */,
+			);
+			path = MyWeatherTests;
+			sourceTree = "<group>";
+		};
+		B89B485B2DD4857600650A29 /* IntegrationTest */ = {
+			isa = PBXGroup;
+			children = (
+				B89B48582DD4801900650A29 /* WeatherRepositoryTest.swift */,
+			);
+			path = IntegrationTest;
+			sourceTree = "<group>";
+		};
+		B89B485C2DD4858200650A29 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				B89B485D2DD4859200650A29 /* WeatherMVTest.swift */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		B89B485F2DD4870E00650A29 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				B89B48662DD48D4800650A29 /* MockWeather.swift */,
+				B89B48642DD48B8E00650A29 /* MockNearestArea.swift */,
+				B89B48622DD488B300650A29 /* MockCurrentCondition.swift */,
+				B89B48602DD4871C00650A29 /* MockWeatherUseCase.swift */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 		B8D1AAF12DCFA05000689A25 /* ViewModel */ = {
@@ -240,6 +310,26 @@
 			productReference = B87E85DD2DCE41BA00A9AA53 /* MyWeather.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B89B484D2DD47FDE00650A29 /* MyWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B89B48562DD47FDF00650A29 /* Build configuration list for PBXNativeTarget "MyWeatherTests" */;
+			buildPhases = (
+				B89B484A2DD47FDE00650A29 /* Sources */,
+				B89B484B2DD47FDE00650A29 /* Frameworks */,
+				B89B484C2DD47FDE00650A29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B89B48532DD47FDF00650A29 /* PBXTargetDependency */,
+			);
+			name = MyWeatherTests;
+			packageProductDependencies = (
+			);
+			productName = MyWeatherTests;
+			productReference = B89B484E2DD47FDF00650A29 /* MyWeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -252,6 +342,10 @@
 				TargetAttributes = {
 					B87E85DC2DCE41BA00A9AA53 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					B89B484D2DD47FDE00650A29 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = B87E85DC2DCE41BA00A9AA53;
 					};
 				};
 			};
@@ -270,6 +364,7 @@
 			projectRoot = "";
 			targets = (
 				B87E85DC2DCE41BA00A9AA53 /* MyWeather */,
+				B89B484D2DD47FDE00650A29 /* MyWeatherTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +377,14 @@
 				B8E1EC7D2DD3BBCF008D4826 /* Cities.json in Resources */,
 				B87E85F42DCE45AC00A9AA53 /* Preview Assets.xcassets in Resources */,
 				B87E85F52DCE45AC00A9AA53 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B89B484C2DD47FDE00650A29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B89B48682DD496D400650A29 /* Cities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +420,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B89B484A2DD47FDE00650A29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B89B485A2DD4801900650A29 /* WeatherRepositoryTest.swift in Sources */,
+				B89B48632DD488C200650A29 /* MockCurrentCondition.swift in Sources */,
+				B89B485E2DD485BA00650A29 /* WeatherMVTest.swift in Sources */,
+				B89B48612DD4872A00650A29 /* MockWeatherUseCase.swift in Sources */,
+				B89B48672DD48D4D00650A29 /* MockWeather.swift in Sources */,
+				B89B48652DD48B9400650A29 /* MockNearestArea.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B89B48532DD47FDF00650A29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B87E85DC2DCE41BA00A9AA53 /* MyWeather */;
+			targetProxy = B89B48522DD47FDF00650A29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B87E85E92DCE41BB00A9AA53 /* Debug */ = {
@@ -499,6 +623,42 @@
 			};
 			name = Release;
 		};
+		B89B48542DD47FDF00650A29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L8BW3D3BVS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davmayqui.MyWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyWeather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyWeather";
+			};
+			name = Debug;
+		};
+		B89B48552DD47FDF00650A29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L8BW3D3BVS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.davmayqui.MyWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyWeather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyWeather";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,6 +676,15 @@
 			buildConfigurations = (
 				B87E85EC2DCE41BB00A9AA53 /* Debug */,
 				B87E85ED2DCE41BB00A9AA53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B89B48562DD47FDF00650A29 /* Build configuration list for PBXNativeTarget "MyWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B89B48542DD47FDF00650A29 /* Debug */,
+				B89B48552DD47FDF00650A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
