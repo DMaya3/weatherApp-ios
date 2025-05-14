@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchView: View {
+    @Environment(\.colorScheme) private var colorScheme
     @State private var searchText = ""
     let viewModel: WeatherViewModel
     var onCitySelected: (CityDTO) -> Void
@@ -24,7 +25,7 @@ struct SearchView: View {
                     onCitySelected(city)
                 } label: {
                     Text("\(city.name), \(city.province), \(city.region)")
-                        .foregroundStyle(.white)
+                        .foregroundStyle(self.colorByColorScheme)
                 }
             }
             .navigationTitle("Search")
@@ -44,5 +45,9 @@ extension SearchView {
                 $0.region.localizedCaseInsensitiveContains(searchText)
             }
         }
+    }
+
+    var colorByColorScheme: Color {
+        self.colorScheme == .dark ? .white : .black
     }
 }
