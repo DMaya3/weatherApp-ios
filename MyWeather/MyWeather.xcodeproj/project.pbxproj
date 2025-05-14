@@ -15,7 +15,6 @@
 		B8148ECC2DD3730000C04232 /* DeniedPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8148ECB2DD3730000C04232 /* DeniedPermissionView.swift */; };
 		B8539D532DD23B9F001B7DC7 /* CurrentConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8539D522DD23B94001B7DC7 /* CurrentConditionView.swift */; };
 		B8539D552DD24028001B7DC7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8539D542DD24020001B7DC7 /* CardView.swift */; };
-		B87E85F42DCE45AC00A9AA53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87E85EE2DCE45AC00A9AA53 /* Preview Assets.xcassets */; };
 		B87E85F52DCE45AC00A9AA53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87E85F02DCE45AC00A9AA53 /* Assets.xcassets */; };
 		B87E85F72DCE45AC00A9AA53 /* MyWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E85F22DCE45AC00A9AA53 /* MyWeatherApp.swift */; };
 		B87E85FC2DCE479D00A9AA53 /* WeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E85FB2DCE479600A9AA53 /* WeatherDTO.swift */; };
@@ -60,7 +59,6 @@
 		B8539D522DD23B94001B7DC7 /* CurrentConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionView.swift; sourceTree = "<group>"; };
 		B8539D542DD24020001B7DC7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B87E85DD2DCE41BA00A9AA53 /* MyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B87E85EE2DCE45AC00A9AA53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B87E85F02DCE45AC00A9AA53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B87E85F22DCE45AC00A9AA53 /* MyWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeatherApp.swift; sourceTree = "<group>"; };
 		B87E85FB2DCE479600A9AA53 /* WeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDTO.swift; sourceTree = "<group>"; };
@@ -152,14 +150,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B87E85EF2DCE45AC00A9AA53 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				B87E85EE2DCE45AC00A9AA53 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		B87E85F32DCE45AC00A9AA53 /* MyWeather */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +161,6 @@
 				B87E86222DCE4BA800A9AA53 /* Utils */,
 				B87E861F2DCE4B8C00A9AA53 /* Repositories */,
 				B87E85F82DCE45B800A9AA53 /* DTOs */,
-				B87E85EF2DCE45AC00A9AA53 /* Preview Content */,
 				B87E85F22DCE45AC00A9AA53 /* MyWeatherApp.swift */,
 			);
 			path = MyWeather;
@@ -375,7 +364,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8E1EC7D2DD3BBCF008D4826 /* Cities.json in Resources */,
-				B87E85F42DCE45AC00A9AA53 /* Preview Assets.xcassets in Resources */,
 				B87E85F52DCE45AC00A9AA53 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,7 +558,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MyWeather/Preview Content\"";
 				DEVELOPMENT_TEAM = L8BW3D3BVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -600,7 +587,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MyWeather/Preview Content\"";
 				DEVELOPMENT_TEAM = L8BW3D3BVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
