@@ -12,20 +12,17 @@ import Combine
 final class WeatherMVTest: XCTestCase {
     var weatherVM: WeatherViewModel?
     var mockUseCase: MockWeatherUseCase?
-    var locationManager: LocationManager?
     
     override func setUpWithError() throws {
         try super.setUpWithError()
-        locationManager = LocationManager()
         mockUseCase = MockWeatherUseCase()
-        weatherVM = WeatherViewModel(name: locationManager?.locality ?? "Sevilla")
+        weatherVM = WeatherViewModel(name: "Sevilla")
     }
     
     override func tearDownWithError() throws {
         try super.tearDownWithError()
         weatherVM = nil
         mockUseCase = nil
-        locationManager = nil
     }
     
     func testSuscriberWeatherSuccess() async {
